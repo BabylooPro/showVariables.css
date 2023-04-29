@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
+:root {
+	/* COLOR */
+	--primary-color: red;
+	--secondary-color: #6a6a6a;
+	--black-color: #111111;
+	--white-color: #ffffff;
+	--lightGray-color: #cbcbcb;
+	--gray-color: #999999;
+	--brown-color: #402d21;
+	--tertiary-color: #46364a;
+	--yellow-accent-color: #f9f871;
+	--orange-accent-color: #f8b363;
+	--green-accent-color: #00c896;
+	--blue-accent-color: #00b0ff;
+	--red-accent-color: #ff3d00;
+
+	/* FONT */
+	--font-base: "DM Sans", sans-serif;
+	--font-heading: "Roboto", sans-serif;
+	--font-monospace: "Courier New", monospace;
+
+	/* WEIGHT FONT */
+	--font-weight-light: 300;
+	--font-weight-regular: 400;
+	--font-weight-medium: 500;
+	--font-weight-bold: 700;
+
+	/* SIZE */
+	--font-size-base: 1rem;
+	--font-size-h1: 2rem;
+	--font-size-h2: 1.5rem;
+	--font-size-h3: 1.25rem;
+	--font-size-h4: 1rem;
+	--font-size-h5: 0.875rem;
+	--font-size-h6: 0.75rem;
+
+	/* BORDER */
+	--border-radius: 25px;
+	--border-width: 1px;
+	--border-color: var(--gray-color);
+	--border-style: dashed;
+
+	/* SHADOW */
+	--box-shadow: 0 0 25px rgba(0, 0, 0, 1);
+	--box-shadow-hover: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

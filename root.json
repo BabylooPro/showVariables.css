@@ -1,0 +1,67 @@
+{
+	"categories": [
+		{
+			"title": "COLOR",
+			"variables": [
+				{ "name": "--primary-color", "type": "color" },
+				{ "name": "--secondary-color", "type": "color" },
+				{ "name": "--black-color", "type": "color" },
+				{ "name": "--white-color", "type": "color" },
+				{ "name": "--lightGray-color", "type": "color" },
+				{ "name": "--gray-color", "type": "color" },
+				{ "name": "--brown-color", "type": "color" },
+				{ "name": "--tertiary-color", "type": "color" },
+				{ "name": "--yellow-accent-color", "type": "color" },
+				{ "name": "--orange-accent-color", "type": "color" },
+				{ "name": "--green-accent-color", "type": "color" },
+				{ "name": "--blue-accent-color", "type": "color" },
+				{ "name": "--red-accent-color", "type": "color" }
+			]
+		},
+		{
+			"title": "FONT",
+			"variables": [
+				{ "name": "--font-base", "type": "font-family" },
+				{ "name": "--font-heading", "type": "font-family" },
+				{ "name": "--font-monospace", "type": "font-family" }
+			]
+		},
+		{
+			"title": "FONT WEIGHT",
+			"variables": [
+				{ "name": "--font-weight-light", "type": "font-weight" },
+				{ "name": "--font-weight-regular", "type": "font-weight" },
+				{ "name": "--font-weight-medium", "type": "font-weight" },
+				{ "name": "--font-weight-bold", "type": "font-weight" }
+			]
+		},
+		{
+			"title": "SIZE",
+			"variables": [
+				{ "name": "--font-size-base", "type": "font-size" },
+				{ "name": "--font-size-h1", "type": "font-size" },
+				{ "name": "--font-size-h2", "type": "font-size" },
+				{ "name": "--font-size-h3", "type": "font-size" },
+				{ "name": "--font-size-h4", "type": "font-size" },
+				{ "name": "--font-size-h5", "type": "font-size" },
+				{ "name": "--font-size-h6", "type": "font-size" }
+			]
+		},
+		{
+			"title": "BORDER",
+			"variables": [
+				{ "name": "--border-radius", "type": "border" },
+				{ "name": "--border-width", "type": "border" },
+				{ "name": "--border-color", "type": "color" },
+				{ "name": "--border-style", "type": "border" }
+			]
+		},
+		{
+			"title": "SHADOW",
+			"variables": [
+				{ "name": "--box-shadow", "type": "shadow" },
+				{ "name": "--box-shadow-hover", "type": "shadow" }
+			]
+		}
+	]
+}
