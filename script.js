@@ -30,15 +30,10 @@ function createCard(variable) {
 		variable.type === "font-weight" ||
 		variable.type === "font-size"
 	) {
-		loremText.style.fontFamily = getComputedStyle(document.documentElement)
-			.getPropertyValue(variable.name)
-			.trim();
-		loremText.style.fontWeight = getComputedStyle(document.documentElement)
-			.getPropertyValue(variable.name)
-			.trim();
-		loremText.style.fontSize = getComputedStyle(document.documentElement)
-			.getPropertyValue(variable.name)
-			.trim();
+		// CALL SETSTYLEPROPERTY FUNCTION FOR EACH PROPERTY
+		setStyleProperty(loremText, "fontFamily", variable);
+		setStyleProperty(loremText, "fontWeight", variable);
+		setStyleProperty(loremText, "fontSize", variable);
 	} else if (variable.type === "border") {
 		loremText.remove();
 
@@ -93,9 +88,7 @@ function createCard(variable) {
 		}
 
 		// APPLY STYLES & ADD BORDERFIGURE TO CARDIMAGE
-		borderFigure.style.width = "100px";
-		borderFigure.style.height = "100px";
-		borderFigure.style.backgroundColor = "#eee";
+		applyCommonStyles(borderFigure);
 
 		cardImage.appendChild(borderFigure);
 		cardImage.style.display = "flex";
@@ -106,8 +99,7 @@ function createCard(variable) {
 		cardImage.style.boxShadow = getComputedStyle(document.documentElement)
 			.getPropertyValue(variable.name)
 			.trim();
-		cardImage.style.width = "100px";
-		cardImage.style.height = "100px";
+		applyCommonStyles(cardImage);
 		cardImage.style.position = "absolute";
 		cardImage.style.top = "50%";
 		cardImage.style.left = "50%";
@@ -120,16 +112,16 @@ function createCard(variable) {
 	card.appendChild(cardDescription);
 
 	// TITLE & BODY TEXT TO CARDDESCRIPTION
-	const textTitle = document.createElement("p");
-	textTitle.classList.add("text-title");
-	textTitle.textContent = variable.name;
+	const textTitle = createTextElement("p", "text-title", variable.name);
 	cardDescription.appendChild(textTitle);
 
-	const textBody = document.createElement("p");
-	textBody.classList.add("text-body");
-	textBody.textContent = getComputedStyle(document.documentElement)
-		.getPropertyValue(variable.name)
-		.trim();
+	const textBody = createTextElement(
+		"p",
+		"text-body",
+		getComputedStyle(document.documentElement)
+			.getPropertyValue(variable.name)
+			.trim()
+	);
 	cardDescription.appendChild(textBody);
 
 	return card;
@@ -139,6 +131,28 @@ function createCard(variable) {
 function colorIsLight(color) {
 	const luminance = chroma(color).luminance();
 	return luminance > 0.6;
+}
+
+// SET STYLE PROPERTY
+function setStyleProperty(element, styleProperty, variable) {
+	element.style[styleProperty] = getComputedStyle(document.documentElement)
+		.getPropertyValue(variable.name)
+		.trim();
+}
+
+// APPLY COMMON STYLES
+function applyCommonStyles(element) {
+	element.style.width = "100px";
+	element.style.height = "100px";
+	element.style.backgroundColor = "#eee";
+}
+
+// CREATE TEXT ELEMENT
+function createTextElement(tagName, className, content) {
+	const textElement = document.createElement(tagName);
+	textElement.classList.add(className);
+	textElement.textContent = content;
+	return textElement;
 }
 
 // GET JSON DATA & CREATE CORRESPONDING HTML ELEMENTS
