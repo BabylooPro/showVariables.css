@@ -8,7 +8,7 @@ https://user-images.githubusercontent.com/35376790/235320870-e6fd0205-1503-42fd-
 
 ## CSS Variable-based Card Creation Project
 
-This repository contains a JavaScript for creating HTML cards with information extracted from CSS variables `:root`.
+This repository contains a JavaScript for creating HTML cards with information extracted from CSS variables `:root` [Documentation](https://devdocs.io/css/--*).
 
 ### Features
 
